@@ -1,0 +1,19 @@
+<div class="container">
+    <h1>Welcome to IMDB scraping</h1>
+    <br>
+    <form action="/search" method="GET">
+        <div class="form-group">
+             <input type="text" class="form-control" name="search" placeholder="Search movies">
+             <br>
+             <button class="btn btn-primary shadow" type="submit">Search</button>
+        </div>
+    </form>
+    {{# each rating }}
+    <div>
+        <img src={{ this.imgPath }}>
+        <br>
+        <h2>Title: {{ this.title }}</h2>
+        <h3>IMDB rating: {{ this.rate }}</h3>
+    </div>
+    {{/each}}
+</div>
